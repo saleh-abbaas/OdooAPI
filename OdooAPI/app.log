@@ -1,0 +1,323 @@
+2024-12-01 20:57:03,183 INFO Serving on http://0.0.0.0:5000
+2024-12-01 21:01:29,467 INFO Received request at /pay_invoices
+2024-12-01 21:01:29,467 INFO {'datetime': '2024-12-01 21:01:29', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0598106070', 'total_amount': 3250.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:01:31,884 INFO Pay invoices failed: No unpaid invoices found for mobile number 0598106070.
+2024-12-01 21:11:44,375 INFO Received request at /pay_invoices
+2024-12-01 21:11:44,376 INFO {'datetime': '2024-12-01 21:11:44', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0598106070', 'total_amount': 3250.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:11:46,686 INFO Pay invoices failed: No unpaid invoices found for mobile number 0598106070.
+2024-12-01 21:16:07,029 INFO Received request at /pay_invoices
+2024-12-01 21:16:07,030 INFO {'datetime': '2024-12-01 21:16:07', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0598106070', 'total_amount': 3250.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:16:09,408 INFO Pay invoices failed: No unpaid invoices found for mobile number 0598106070.
+2024-12-01 21:16:19,885 INFO Serving on http://0.0.0.0:5000
+2024-12-01 21:16:22,162 INFO Received request at /pay_invoices
+2024-12-01 21:16:22,163 INFO {'datetime': '2024-12-01 21:16:22', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0598106070', 'total_amount': 3250.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:16:24,729 INFO Pay invoices failed: No unpaid invoices found for mobile number 0598106070.
+2024-12-01 21:23:13,562 INFO Received request at /pay_invoices
+2024-12-01 21:23:13,563 INFO {'datetime': '2024-12-01 21:23:13', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0598106070', 'total_amount': 3250.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:23:16,124 INFO Pay invoices failed: No unpaid invoices found for mobile number 0598106070.
+2024-12-01 21:24:04,112 INFO Received request at /pay_invoices
+2024-12-01 21:24:04,113 INFO {'datetime': '2024-12-01 21:24:04', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599357102', 'total_amount': 3250.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:24:07,061 ERROR Pay invoices failed: Provided total amount does not match the total unpaid amount.
+2024-12-01 21:24:19,812 INFO Received request at /check_customer
+2024-12-01 21:24:19,813 INFO {'datetime': '2024-12-01 21:24:19', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599357102', 'source': 'esadad'}}
+2024-12-01 21:24:22,405 INFO Check customer success: Customer found for mobile number 0599357102: √”ﬂ«‰ ≈Ì·Ì  Â«Ê” 2.
+2024-12-01 21:24:22,407 INFO Received request at /total_amount
+2024-12-01 21:24:22,408 INFO {'datetime': '2024-12-01 21:24:22', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599357102', 'source': 'esadad'}}
+2024-12-01 21:24:24,756 INFO Total amount success: Total unpaid amount for mobile number 0599357102 is 6350.0.
+2024-12-01 21:24:53,367 INFO Received request at /pay_invoices
+2024-12-01 21:24:53,368 INFO {'datetime': '2024-12-01 21:24:53', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599357102', 'total_amount': 6350.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:25:40,819 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3951: Payment Completed; Invoice ID 3894: Payment Completed; Invoice ID 3836: Payment Completed; Invoice ID 3746: Payment Completed; Invoice ID 3690: Payment Completed; Invoice ID 3633: Payment Completed; Invoice ID 3576: Payment Completed; Invoice ID 3520: Payment Completed; Invoice ID 3475: Payment Completed; Invoice ID 3422: Payment Completed; Invoice ID 3050: Payment Completed; Invoice ID 2932: Payment Completed; Invoice ID 2860: Payment Completed; Invoice ID 2804: Payment Completed; Invoice ID 2746: Payment Completed; Invoice ID 2688: Payment Completed; Invoice ID 2624: Payment Completed; Invoice ID 2571: Payment Completed; Invoice ID 2526: Payment Completed.
+2024-12-01 21:29:05,812 INFO Received request at /pay_invoices
+2024-12-01 21:29:05,812 INFO {'datetime': '2024-12-01 21:29:05', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599357102', 'total_amount': 6350.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:29:08,332 INFO Pay invoices failed: No unpaid invoices found for mobile number 0599357102.
+2024-12-01 21:29:51,706 INFO Received request at /pay_invoices
+2024-12-01 21:29:51,707 INFO {'datetime': '2024-12-01 21:29:51', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592313121', 'total_amount': 6350.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:29:53,967 ERROR Pay invoices failed: Provided total amount does not match the total unpaid amount.
+2024-12-01 21:30:02,395 INFO Received request at /check_customer
+2024-12-01 21:30:02,396 INFO {'datetime': '2024-12-01 21:30:02', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592313121', 'source': 'esadad'}}
+2024-12-01 21:30:04,531 INFO Check customer success: Customer found for mobile number 0592313121: ⁄„«—… ›·· «·Ê«Õ….
+2024-12-01 21:30:04,537 INFO Received request at /total_amount
+2024-12-01 21:30:04,538 INFO {'datetime': '2024-12-01 21:30:04', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592313121', 'source': 'esadad'}}
+2024-12-01 21:30:07,217 INFO Total amount success: Total unpaid amount for mobile number 0592313121 is 875.0.
+2024-12-01 21:30:32,932 INFO Received request at /pay_invoices
+2024-12-01 21:30:32,933 INFO {'datetime': '2024-12-01 21:30:32', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592313121', 'total_amount': 875.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 21:30:44,200 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3948: Payment Completed; Invoice ID 3891: Payment Completed; Invoice ID 3833: Payment Completed; Invoice ID 3772: Payment Completed.
+2024-12-01 21:32:13,057 INFO Received request at /pay_invoices
+2024-12-01 21:32:13,058 INFO {'datetime': '2024-12-01 21:32:13', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0592313123', 'total_amount': 12740.0, 'date': '2023-10-01', 'source': 'esadad'}}
+2024-12-01 21:32:15,407 ERROR Pay invoices failed: Provided total amount does not match the total unpaid amount.
+2024-12-01 21:32:37,170 INFO Received request at /total_amount
+2024-12-01 21:32:37,170 INFO {'datetime': '2024-12-01 21:32:37', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0592313123', 'source': 'esadad'}}
+2024-12-01 21:32:39,709 INFO Total amount success: Total unpaid amount for mobile number 0592313123 is 600.0.
+2024-12-01 21:32:49,568 INFO Received request at /pay_invoices
+2024-12-01 21:32:49,569 INFO {'datetime': '2024-12-01 21:32:49', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0592313123', 'total_amount': 600.0, 'date': '2023-10-01', 'source': 'esadad'}}
+2024-12-01 21:32:58,535 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3949: Payment Completed; Invoice ID 3892: Payment Completed; Invoice ID 3834: Payment Completed.
+2024-12-01 21:36:06,636 INFO Received request at /total_amount
+2024-12-01 21:36:06,637 INFO {'datetime': '2024-12-01 21:36:06', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0594232314', 'source': 'esadad'}}
+2024-12-01 21:36:08,898 INFO Total amount success: Total unpaid amount for mobile number 0594232314 is 17450.0.
+2024-12-01 21:36:30,816 INFO Received request at /pay_invoices
+2024-12-01 21:36:30,817 INFO {'datetime': '2024-12-01 21:36:30', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0594232314', 'total_amount': 17450.0, 'date': '2023-10-01', 'source': 'esadad'}}
+2024-12-01 21:37:27,226 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3932: Payment Completed; Invoice ID 3872: Payment Completed; Invoice ID 3815: Payment Completed; Invoice ID 3754: Payment Completed; Invoice ID 3699: Payment Completed; Invoice ID 3642: Payment Completed; Invoice ID 3583: Payment Completed; Invoice ID 3529: Payment Completed; Invoice ID 3482: Payment Completed; Invoice ID 3429: Payment Completed; Invoice ID 3025: Payment Completed; Invoice ID 2967: Payment Completed; Invoice ID 2912: Payment Completed; Invoice ID 2838: Payment Completed; Invoice ID 2780: Payment Completed; Invoice ID 2721: Payment Completed; Invoice ID 2666: Payment Completed; Invoice ID 2599: Payment Completed; Invoice ID 2549: Payment Completed; Invoice ID 2501: Payment Completed; Invoice ID 2167: Payment Completed; Invoice ID 2078: Payment Completed; Invoice ID 1973: Payment Completed; Invoice ID 1706: Payment Completed.
+2024-12-01 21:37:51,184 INFO Serving on http://0.0.0.0:5000
+2024-12-01 21:40:09,690 INFO Serving on http://0.0.0.0:5000
+2024-12-01 21:40:15,895 INFO Received request at /total_amount
+2024-12-01 21:40:15,895 INFO {'datetime': '2024-12-01 21:40:15', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0594232314', 'source': 'esadad'}}
+2024-12-01 21:40:18,416 INFO Total amount failed: No unpaid invoices found for mobile number 0594232314.
+2024-12-01 21:41:14,374 INFO Received request at /total_amount
+2024-12-01 21:41:14,374 INFO {'datetime': '2024-12-01 21:41:14', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 21:41:16,674 ERROR Error in /total_amount endpoint: 'invoice_id'
+Traceback (most recent call last):
+  File "c:\Users\Asus\Desktop\Marafeq\odoo17\OdooAPI\OdooAPI\routes.py", line 191, in get_total_amount
+    invoice_list = [p['invoice_id'] for p in invoices]
+                    ~^^^^^^^^^^^^^^
+KeyError: 'invoice_id'
+2024-12-01 21:42:33,695 INFO Serving on http://0.0.0.0:5000
+2024-12-01 21:42:43,898 INFO Received request at /total_amount
+2024-12-01 21:42:43,899 INFO {'datetime': '2024-12-01 21:42:43', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 21:42:46,311 INFO Total amount success: Total unpaid amount for mobile number 0525666777 is 3840.0.
+2024-12-01 21:46:38,884 INFO Serving on http://0.0.0.0:5000
+2024-12-01 21:46:43,194 INFO Received request at /total_amount
+2024-12-01 21:46:43,194 INFO {'datetime': '2024-12-01 21:46:43', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 21:46:45,844 INFO Total amount success: Total unpaid amount for mobile number 0525666777 is 3840.0.
+2024-12-01 21:48:06,092 INFO Received request at /pay_invoices
+2024-12-01 21:48:06,094 INFO {'datetime': '2024-12-01 21:48:06', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'total_amount': 3840.0, 'date': '2023-10-01', 'source': 'esadad'}}
+2024-12-01 21:48:22,378 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3955: Payment Completed; Invoice ID 3866: Payment Completed; Invoice ID 3808: Payment Completed; Invoice ID 3748: Payment Completed; Invoice ID 3692: Payment Completed; Invoice ID 3636: Payment Completed.
+2024-12-01 22:00:26,517 INFO Received request at /check_customer
+2024-12-01 22:00:26,518 INFO {'datetime': '2024-12-01 22:00:26', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592313121', 'source': 'esadad'}}
+2024-12-01 22:00:28,903 INFO Check customer success: Customer found for mobile number 0592313121: ⁄„«—… ›·· «·Ê«Õ….
+2024-12-01 22:00:28,909 INFO Received request at /total_amount
+2024-12-01 22:00:28,911 INFO {'datetime': '2024-12-01 22:00:28', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592313121', 'source': 'esadad'}}
+2024-12-01 22:00:31,147 INFO Total amount failed: No unpaid invoices found for mobile number 0592313121.
+2024-12-01 22:01:00,203 INFO Received request at /check_customer
+2024-12-01 22:01:00,203 INFO {'datetime': '2024-12-01 22:01:00', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525333444', 'source': 'esadad'}}
+2024-12-01 22:01:01,914 INFO Check customer success: Customer found for mobile number 0525333444: ‘—ﬂ… ›·ﬂ.
+2024-12-01 22:01:01,919 INFO Received request at /total_amount
+2024-12-01 22:01:01,920 INFO {'datetime': '2024-12-01 22:01:01', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525333444', 'source': 'esadad'}}
+2024-12-01 22:01:04,405 INFO Total amount success: Total unpaid amount for mobile number 0525333444 is 8600.0.
+2024-12-01 22:01:34,875 INFO Received request at /pay_invoices
+2024-12-01 22:01:34,876 INFO {'datetime': '2024-12-01 22:01:34', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525333444', 'total_amount': 8600.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 22:02:23,157 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3912: Payment Completed; Invoice ID 3854: Payment Completed; Invoice ID 3796: Payment Completed; Invoice ID 3735: Payment Completed; Invoice ID 3678: Payment Completed; Invoice ID 3620: Payment Completed; Invoice ID 3564: Payment Completed; Invoice ID 3509: Payment Completed; Invoice ID 3461: Payment Completed; Invoice ID 3407: Payment Completed; Invoice ID 3005: Payment Completed; Invoice ID 2947: Payment Completed; Invoice ID 2894: Payment Completed; Invoice ID 2855: Payment Completed; Invoice ID 2798: Payment Completed; Invoice ID 2740: Payment Completed; Invoice ID 2684: Payment Completed; Invoice ID 2618: Payment Completed; Invoice ID 2567: Payment Completed; Invoice ID 2520: Payment Completed; Invoice ID 2186: Payment Completed; Invoice ID 2101: Payment Completed.
+2024-12-01 22:02:55,635 INFO Received request at /check_customer
+2024-12-01 22:02:55,635 INFO {'datetime': '2024-12-01 22:02:55', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525333444', 'source': 'esadad'}}
+2024-12-01 22:02:57,506 INFO Check customer success: Customer found for mobile number 0525333444: ‘—ﬂ… ›·ﬂ.
+2024-12-01 22:02:57,510 INFO Received request at /total_amount
+2024-12-01 22:02:57,511 INFO {'datetime': '2024-12-01 22:02:57', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525333444', 'source': 'esadad'}}
+2024-12-01 22:02:59,710 INFO Total amount failed: No unpaid invoices found for mobile number 0525333444.
+2024-12-01 22:03:56,592 INFO Received request at /check_customer
+2024-12-01 22:03:56,592 INFO {'datetime': '2024-12-01 22:03:56', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592000209', 'source': 'esadad'}}
+2024-12-01 22:03:58,436 INFO Check customer success: Customer found for mobile number 0592000209: ⁄„«—… «·⁄Ì”«ÊÌ.
+2024-12-01 22:03:58,439 INFO Received request at /total_amount
+2024-12-01 22:03:58,440 INFO {'datetime': '2024-12-01 22:03:58', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592000209', 'source': 'esadad'}}
+2024-12-01 22:04:00,662 INFO Total amount success: Total unpaid amount for mobile number 0592000209 is 6735.0.
+2024-12-01 22:04:24,973 INFO Received request at /pay_invoices
+2024-12-01 22:04:24,974 INFO {'datetime': '2024-12-01 22:04:24', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592000209', 'total_amount': 6735.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 22:04:46,269 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3922: Payment Completed; Invoice ID 3865: Payment Completed; Invoice ID 3806: Payment Completed; Invoice ID 3745: Payment Completed; Invoice ID 3688: Payment Completed; Invoice ID 3632: Payment Completed; Invoice ID 3575: Payment Completed; Invoice ID 3521: Payment Completed; Invoice ID 2908: Payment Completed.
+2024-12-01 22:06:56,349 INFO Serving on http://0.0.0.0:5000
+2024-12-01 22:09:02,959 INFO Received request at /check_customer
+2024-12-01 22:09:02,959 INFO {'datetime': '2024-12-01 22:09:02', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:09:04,964 INFO Check customer success: Customer found for mobile number 0599101010: ‘—ﬂ… «·„”«— (”‰œÌ«‰).
+2024-12-01 22:09:04,969 INFO Received request at /total_amount
+2024-12-01 22:09:04,970 INFO {'datetime': '2024-12-01 22:09:04', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:09:07,602 INFO Total amount success: Total unpaid amount for mobile number 0599101010 is 8100.0.
+2024-12-01 22:09:18,079 INFO Received request at /total_amount
+2024-12-01 22:09:18,079 INFO {'datetime': '2024-12-01 22:09:18', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:09:20,390 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:09:34,840 INFO Received request at /total_amount
+2024-12-01 22:09:34,841 INFO {'datetime': '2024-12-01 22:09:34', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:09:37,386 INFO Total amount success: Total unpaid amount for mobile number 0599101010 is 8100.0.
+2024-12-01 22:10:59,107 INFO Received request at /check_customer
+2024-12-01 22:10:59,108 INFO {'datetime': '2024-12-01 22:10:59', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:11:00,889 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:11:00,894 INFO Received request at /total_amount
+2024-12-01 22:11:00,895 INFO {'datetime': '2024-12-01 22:11:00', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:11:03,294 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:12:37,867 INFO Received request at /check_customer
+2024-12-01 22:12:37,867 INFO {'datetime': '2024-12-01 22:12:37', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:12:39,599 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:12:39,610 INFO Received request at /total_amount
+2024-12-01 22:12:39,610 INFO {'datetime': '2024-12-01 22:12:39', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:12:42,030 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:13:11,041 INFO Received request at /check_customer
+2024-12-01 22:13:11,041 INFO {'datetime': '2024-12-01 22:13:11', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:13:12,771 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:13:12,790 INFO Received request at /total_amount
+2024-12-01 22:13:12,791 INFO {'datetime': '2024-12-01 22:13:12', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:13:14,983 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:13:26,061 INFO Received request at /check_customer
+2024-12-01 22:13:26,061 INFO {'datetime': '2024-12-01 22:13:26', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:13:28,048 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:13:28,052 INFO Received request at /total_amount
+2024-12-01 22:13:28,052 INFO {'datetime': '2024-12-01 22:13:28', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:13:30,317 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:14:00,595 INFO Received request at /check_customer
+2024-12-01 22:14:00,595 INFO {'datetime': '2024-12-01 22:14:00', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:14:02,518 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:14:02,528 INFO Received request at /total_amount
+2024-12-01 22:14:02,528 INFO {'datetime': '2024-12-01 22:14:02', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:14:05,239 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:16:39,183 INFO Received request at /total_amount
+2024-12-01 22:16:39,191 INFO {'datetime': '2024-12-01 22:16:39', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:16:41,796 INFO Total amount success: Total unpaid amount for mobile number 0599101010 is 8100.0.
+2024-12-01 22:16:42,726 INFO Received request at /check_customer
+2024-12-01 22:16:42,726 INFO {'datetime': '2024-12-01 22:16:42', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:16:44,436 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:16:44,441 INFO Received request at /total_amount
+2024-12-01 22:16:44,442 INFO {'datetime': '2024-12-01 22:16:44', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:16:46,850 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:17:07,715 INFO Received request at /total_amount
+2024-12-01 22:17:07,715 INFO {'datetime': '2024-12-01 22:17:07', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:17:10,327 INFO Total amount success: Total unpaid amount for mobile number 0599101010 is 8100.0.
+2024-12-01 22:17:20,579 INFO Received request at /total_amount
+2024-12-01 22:17:20,579 INFO {'datetime': '2024-12-01 22:17:20', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:17:23,073 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:18:21,328 INFO Received request at /total_amount
+2024-12-01 22:18:21,328 INFO {'datetime': '2024-12-01 22:18:21', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:18:23,544 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:18:40,737 INFO Serving on http://0.0.0.0:5000
+2024-12-01 22:18:42,617 INFO Received request at /total_amount
+2024-12-01 22:18:42,617 INFO {'datetime': '2024-12-01 22:18:42', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:18:44,904 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:18:46,336 INFO Received request at /total_amount
+2024-12-01 22:18:46,337 INFO {'datetime': '2024-12-01 22:18:46', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:18:48,640 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:18:52,592 INFO Received request at /total_amount
+2024-12-01 22:18:52,592 INFO {'datetime': '2024-12-01 22:18:52', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:18:55,258 INFO Total amount success: Total unpaid amount for mobile number 0599101010 is 8100.0.
+2024-12-01 22:19:20,859 INFO Received request at /check_customer
+2024-12-01 22:19:20,860 INFO {'datetime': '2024-12-01 22:19:20', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:19:22,566 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:19:22,572 INFO Received request at /total_amount
+2024-12-01 22:19:22,573 INFO {'datetime': '2024-12-01 22:19:22', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:19:24,756 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:20:35,402 INFO Received request at /check_customer
+2024-12-01 22:20:35,403 INFO {'datetime': '2024-12-01 22:20:35', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:20:37,333 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:20:37,336 INFO Received request at /total_amount
+2024-12-01 22:20:37,336 INFO {'datetime': '2024-12-01 22:20:37', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:20:39,569 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:21:25,598 INFO Received request at /check_customer
+2024-12-01 22:21:25,598 INFO {'datetime': '2024-12-01 22:21:25', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:21:27,338 INFO Check customer success: Customer found for mobile number 0525666777: GPS „Œ »—.
+2024-12-01 22:21:27,359 INFO Received request at /total_amount
+2024-12-01 22:21:27,359 INFO {'datetime': '2024-12-01 22:21:27', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0525666777', 'source': 'esadad'}}
+2024-12-01 22:21:29,969 INFO Total amount failed: No unpaid invoices found for mobile number 0525666777.
+2024-12-01 22:21:46,397 INFO Received request at /check_customer
+2024-12-01 22:21:46,398 INFO {'datetime': '2024-12-01 22:21:46', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:21:48,270 INFO Check customer success: Customer found for mobile number 0599101010: ‘—ﬂ… «·„”«— (”‰œÌ«‰).
+2024-12-01 22:21:48,297 INFO Received request at /total_amount
+2024-12-01 22:21:48,298 INFO {'datetime': '2024-12-01 22:21:48', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:21:51,026 INFO Total amount success: Total unpaid amount for mobile number 0599101010 is 8100.0.
+2024-12-01 22:26:07,627 INFO Received request at /check_customer
+2024-12-01 22:26:07,628 INFO {'datetime': '2024-12-01 22:26:07', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:26:09,403 INFO Check customer success: Customer found for mobile number 0599101010: ‘—ﬂ… «·„”«— (”‰œÌ«‰).
+2024-12-01 22:26:09,406 INFO Received request at /total_amount
+2024-12-01 22:26:09,406 INFO {'datetime': '2024-12-01 22:26:09', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:26:11,878 INFO Total amount success: Total unpaid amount for mobile number 0599101010 is 8100.0.
+2024-12-01 22:26:33,657 INFO Received request at /check_customer
+2024-12-01 22:26:33,660 INFO {'datetime': '2024-12-01 22:26:33', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:26:35,504 INFO Check customer success: Customer found for mobile number 0599101010: ‘—ﬂ… «·„”«— (”‰œÌ«‰).
+2024-12-01 22:26:35,506 INFO Received request at /total_amount
+2024-12-01 22:26:35,507 INFO {'datetime': '2024-12-01 22:26:35', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'source': 'esadad'}}
+2024-12-01 22:26:38,104 INFO Total amount success: Total unpaid amount for mobile number 0599101010 is 8100.0.
+2024-12-01 22:27:22,276 INFO Received request at /pay_invoices
+2024-12-01 22:27:22,277 INFO {'datetime': '2024-12-01 22:27:22', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'total_amount': 8100.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 22:28:22,093 ERROR Error in /pay_invoices endpoint: 'amount_residual'
+Traceback (most recent call last):
+  File "c:\Users\Asus\Desktop\Marafeq\odoo17\OdooAPI\OdooAPI\routes.py", line 334, in pay_all_invoices
+    invoice_list = [{'id':p['invoice_id'],'amount':p['amount_residual']}  for p in payment_results]
+                                                   ~^^^^^^^^^^^^^^^^^^^
+KeyError: 'amount_residual'
+2024-12-01 22:29:10,758 INFO Serving on http://0.0.0.0:5000
+2024-12-01 22:29:15,976 INFO Received request at /pay_invoices
+2024-12-01 22:29:15,977 INFO {'datetime': '2024-12-01 22:29:15', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599101010', 'total_amount': 8100.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 22:29:18,228 ERROR Pay invoices failed: No unpaid invoices found for mobile number 0599101010.
+2024-12-01 22:30:28,487 INFO Received request at /check_customer
+2024-12-01 22:30:28,488 INFO {'datetime': '2024-12-01 22:30:28', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:30:30,356 ERROR Check customer failed: Invalid Billing Number
+2024-12-01 22:33:45,523 INFO Serving on http://0.0.0.0:5000
+2024-12-01 22:33:56,862 INFO Received request at /check_customer
+2024-12-01 22:33:56,862 INFO {'datetime': '2024-12-01 22:33:56', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:33:58,621 ERROR Check customer failed: Invalid Billing Number
+2024-12-01 22:37:10,009 INFO Received request at /check_customer
+2024-12-01 22:37:10,009 INFO {'datetime': '2024-12-01 22:37:10', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:37:11,841 ERROR Check customer failed: Invalid Billing Number
+2024-12-01 22:38:19,976 INFO Received request at /check_customer
+2024-12-01 22:38:19,976 INFO {'datetime': '2024-12-01 22:38:19', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:38:21,914 ERROR Check customer failed: Invalid Billing Number
+2024-12-01 22:39:01,347 INFO Received request at /check_customer
+2024-12-01 22:39:01,347 INFO {'datetime': '2024-12-01 22:39:01', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592333711', 'source': 'esadad'}}
+2024-12-01 22:39:03,218 INFO Check customer success: Customer found for mobile number 0592333711: ⁄„«—… «·»Ã….
+2024-12-01 22:39:03,223 INFO Received request at /total_amount
+2024-12-01 22:39:03,223 INFO {'datetime': '2024-12-01 22:39:03', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0592333711', 'source': 'esadad'}}
+2024-12-01 22:39:05,444 INFO Total amount failed: No unpaid invoices found for mobile number 0592333711.
+2024-12-01 22:39:15,790 INFO Received request at /check_customer
+2024-12-01 22:39:15,791 INFO {'datetime': '2024-12-01 22:39:15', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:39:17,557 ERROR Check customer failed: Invalid Billing Number
+2024-12-01 22:39:29,527 INFO Received request at /check_customer
+2024-12-01 22:39:29,528 INFO {'datetime': '2024-12-01 22:39:29', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:39:31,222 ERROR Check customer failed: Invalid Billing Number
+2024-12-01 22:39:36,145 INFO Received request at /total_amount
+2024-12-01 22:39:36,146 INFO {'datetime': '2024-12-01 22:39:36', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:39:37,763 ERROR Total amount failed: Invalid Billing Number
+2024-12-01 22:41:20,203 INFO Received request at /total_amount
+2024-12-01 22:41:20,203 INFO {'datetime': '2024-12-01 22:41:20', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.42.0', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:41:22,005 ERROR Total amount failed: Invalid Billing Number
+2024-12-01 22:41:24,092 INFO Received request at /check_customer
+2024-12-01 22:41:24,092 INFO {'datetime': '2024-12-01 22:41:24', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:41:25,906 ERROR Check customer failed: Invalid Billing Number
+2024-12-01 22:41:56,626 INFO Received request at /check_customer
+2024-12-01 22:41:56,627 INFO {'datetime': '2024-12-01 22:41:56', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:41:58,368 INFO Check customer success: Customer found for mobile number 0567434370: ⁄„«—… ‰’«—.
+2024-12-01 22:41:58,372 INFO Received request at /total_amount
+2024-12-01 22:41:58,373 INFO {'datetime': '2024-12-01 22:41:58', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'source': 'esadad'}}
+2024-12-01 22:42:00,926 INFO Total amount success: Total unpaid amount for mobile number 0567434370 is 5860.0.
+2024-12-01 22:42:17,965 INFO Received request at /pay_invoices
+2024-12-01 22:42:17,966 INFO {'datetime': '2024-12-01 22:42:17', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'total_amount': 8100.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 22:42:20,440 ERROR Pay invoices failed: Provided total amount does not match the total unpaid amount.
+2024-12-01 22:42:54,069 INFO Received request at /pay_invoices
+2024-12-01 22:42:54,070 INFO {'datetime': '2024-12-01 22:42:54', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434370', 'total_amount': 5860.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 22:43:28,732 ERROR Error in /pay_invoices endpoint: 'amount'
+Traceback (most recent call last):
+  File "c:\Users\Asus\Desktop\Marafeq\odoo17\OdooAPI\OdooAPI\routes.py", line 342, in pay_all_invoices
+    invoice_list = [{'id':p['invoice_id'],'amount':p['amount']}  for p in payment_results]
+                                                   ~^^^^^^^^^^
+KeyError: 'amount'
+2024-12-01 22:48:54,526 INFO Serving on http://0.0.0.0:5000
+2024-12-01 22:49:30,926 INFO Received request at /check_customer
+2024-12-01 22:49:30,927 INFO {'datetime': '2024-12-01 22:49:30', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434371', 'source': 'esadad'}}
+2024-12-01 22:49:32,834 INFO Check customer success: Customer found for mobile number 0567434371: ‘—ﬂ… Ê«Ìœ ·Ì‰ﬂ.
+2024-12-01 22:49:32,840 INFO Received request at /total_amount
+2024-12-01 22:49:32,841 INFO {'datetime': '2024-12-01 22:49:32', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434371', 'source': 'esadad'}}
+2024-12-01 22:49:35,381 INFO Total amount success: Total unpaid amount for mobile number 0567434371 is 7320.0.
+2024-12-01 22:49:59,844 INFO Received request at /pay_invoices
+2024-12-01 22:49:59,845 INFO {'datetime': '2024-12-01 22:49:59', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434371', 'total_amount': 7320.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 22:50:33,867 ERROR Error in /pay_invoices endpoint: 'int' object is not subscriptable
+Traceback (most recent call last):
+  File "c:\Users\Asus\Desktop\Marafeq\odoo17\OdooAPI\OdooAPI\routes.py", line 342, in pay_all_invoices
+    invoice_list = [{'id':p['invoice_id'],'amount':p['payment_register_id'][0]['amount']}  for p in payment_results]
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'int' object is not subscriptable
+2024-12-01 22:52:21,426 INFO Serving on http://0.0.0.0:5000
+2024-12-01 22:52:27,020 INFO Received request at /check_customer
+2024-12-01 22:52:27,020 INFO {'datetime': '2024-12-01 22:52:27', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434371', 'source': 'esadad'}}
+2024-12-01 22:52:29,181 INFO Check customer success: Customer found for mobile number 0567434371: ‘—ﬂ… Ê«Ìœ ·Ì‰ﬂ.
+2024-12-01 22:52:29,186 INFO Received request at /total_amount
+2024-12-01 22:52:29,187 INFO {'datetime': '2024-12-01 22:52:29', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434371', 'source': 'esadad'}}
+2024-12-01 22:52:31,784 INFO Total amount failed: No unpaid invoices found for mobile number 0567434371.
+2024-12-01 22:55:16,280 INFO Serving on http://0.0.0.0:5000
+2024-12-01 22:55:23,542 INFO Received request at /check_customer
+2024-12-01 22:55:23,543 INFO {'datetime': '2024-12-01 22:55:23', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434371', 'source': 'esadad'}}
+2024-12-01 22:55:25,376 INFO Check customer success: Customer found for mobile number 0567434371: ‘—ﬂ… Ê«Ìœ ·Ì‰ﬂ.
+2024-12-01 22:55:25,382 INFO Received request at /total_amount
+2024-12-01 22:55:25,384 INFO {'datetime': '2024-12-01 22:55:25', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0567434371', 'source': 'esadad'}}
+2024-12-01 22:55:27,870 INFO Total amount failed: No unpaid invoices found for mobile number 0567434371.
+2024-12-01 22:56:17,810 INFO Received request at /check_customer
+2024-12-01 22:56:17,810 INFO {'datetime': '2024-12-01 22:56:17', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599762772', 'source': 'esadad'}}
+2024-12-01 22:56:19,687 INFO Check customer success: Customer found for mobile number 0599762772: ⁄„«—… ≈Ì·Ì  Â«Ê” 1.
+2024-12-01 22:56:19,689 INFO Received request at /total_amount
+2024-12-01 22:56:19,690 INFO {'datetime': '2024-12-01 22:56:19', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599762772', 'source': 'esadad'}}
+2024-12-01 22:56:21,975 INFO Total amount success: Total unpaid amount for mobile number 0599762772 is 14500.0.
+2024-12-01 22:56:40,884 INFO Received request at /pay_invoices
+2024-12-01 22:56:40,886 INFO {'datetime': '2024-12-01 22:56:40', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'Python/3.12 aiohttp/3.11.9', 'request_data': {'mobile_number': '0599762772', 'total_amount': 14500.0, 'date': '2024-06-09', 'source': 'esadad'}}
+2024-12-01 22:57:21,476 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3915: Payment Completed; Invoice ID 3857: Payment Completed; Invoice ID 3799: Payment Completed; Invoice ID 3738: Payment Completed; Invoice ID 3681: Payment Completed; Invoice ID 3623: Payment Completed; Invoice ID 3567: Payment Completed; Invoice ID 3513: Payment Completed; Invoice ID 3464: Payment Completed; Invoice ID 3410: Payment Completed; Invoice ID 3009: Payment Completed; Invoice ID 2951: Payment Completed; Invoice ID 2899: Payment Completed; Invoice ID 2863: Payment Completed; Invoice ID 2806: Payment Completed; Invoice ID 2751: Payment Completed; Invoice ID 2693: Payment Completed.
+2024-12-01 23:21:49,260 INFO Serving on http://0.0.0.0:5000
+2024-12-03 01:16:37,741 INFO Serving on http://0.0.0.0:5000
