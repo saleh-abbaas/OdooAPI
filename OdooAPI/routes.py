@@ -238,7 +238,7 @@ def pay_all_invoices():
 
         if not mobile_number:
             raise ValueError("Mobile number is required.")
-        if not total_amount:
+        if total_amount is None:
             raise ValueError("Total amount is required.")
         if not payment_date:
             raise ValueError("Date is required.")
@@ -292,7 +292,7 @@ def pay_all_invoices():
             logging.error(f"Pay invoices failed: {message}")
             return jsonify(response_data), 400
         else:
-            # Validate the total amount using '/total_amount'
+            # Fetch unpaid invoices
             try:
                 invoices = odoo_client.get_unpaid_invoices_by_mobile(mobile_number)
             except Exception as e:
@@ -313,33 +313,24 @@ def pay_all_invoices():
                 logging.error(f"Pay invoices failed: {message}")
                 return jsonify(response_data), 303
 
-            total_unpaid_amount = sum(invoice['amount_residual'] for invoice in invoices)
-
-            # Check if the inputted total_amount matches the calculated total_unpaid_amount
-            if round(total_unpaid_amount, 2) != round(total_amount, 2):
-                message = "Provided total amount does not match the total unpaid amount."
-                code = '303'
-                status_of_query = False
-                status_str = 'failed'
-                query_status = 0
-                response_data = create_json_response(
-                    message, code, datetime.now(), query_number, query_table, status_of_query, status_str, query_status)
-                response_data['invoice_list'] = []
-                response_data['expected_total_amount'] = total_unpaid_amount
-                logging.error(f"Pay invoices failed: {message}")
-                return jsonify(response_data), 303
-
-            # Proceed to register payments
+            # Proceed to register payments with the given total_amount
             try:
-                payment_results = odoo_client.register_payment_for_invoices(invoices, payment_date)
+                payment_results = odoo_client.register_payment_for_invoices(invoices, payment_date, total_amount)
             except Exception as e:
                 logging.error(f"Odoo connection error: {e}", exc_info=True)
                 return jsonify({'message': 'Service temporarily unavailable. Please try again later.'}), 503
 
-            # Convert payment results to string for the message
+            # Prepare invoice list for response
+            invoice_list = [{
+                'invoice_id': p['invoice_id'],
+                'invoice_total_amount': p['invoice_total_amount'],
+                'amount_paid': p['amount_paid'],
+                'amount_remaining': p['amount_remaining'],
+                'status': p['status']
+            } for p in payment_results]
+
             payments_info = '; '.join(
                 [f"Invoice ID {p['invoice_id']}: {p['status']}" for p in payment_results])
-            invoice_list = [ {'invoice_id':p['invoice_id'],'status' : p['status']} for p in payment_results]
             message = f"Payment process completed. Details: {payments_info}."
             code = '200'
             status_of_query = True

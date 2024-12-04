@@ -94,36 +94,46 @@ class OdooClient:
                 ['move_type', '=', 'out_invoice'],
                 ['amount_residual', '>', 0]
             ]],
-            {'fields': ['id', 'amount_residual', 'currency_id', 'partner_id']}
+            {'fields': ['id', 'amount_residual', 'currency_id', 'partner_id', 'invoice_date', 'amount_total']}
         )
         if not invoices:
             return None
         return invoices
 
-    def register_payment_for_invoices(self, invoices, payment_date):
+    def register_payment_for_invoices(self, invoices, payment_date, total_amount):
         payments_made = []
         bank_journal_id = self.get_bank_journal_id()
         if not bank_journal_id:
             return [{"message": "Bank journal not found."}]
 
-        for invoice in invoices:
+        # Sort invoices by 'invoice_date'
+        invoices_sorted = sorted(invoices, key=lambda x: x['invoice_date'])
+
+        for invoice in invoices_sorted:
             try:
                 invoice_id = invoice['id']
-                # Fetch the invoice details
-                invoice_record = self.execute_kw(
-                    'account.move', 'read',
-                    [invoice_id],
-                    {'fields': ['amount_residual', 'state', 'partner_id']}
-                )
-                if not invoice_record or invoice_record[0]['state'] != 'posted':
+                invoice_amount_total = invoice['amount_total']
+                invoice_amount_residual = invoice['amount_residual']
+                invoice_date = invoice['invoice_date']
+                # If total_amount left is zero, break
+                if total_amount <= 0:
                     payments_made.append({
                         'invoice_id': invoice_id,
-                        'status': 'Invoice not posted or not found.'
+                        'invoice_total_amount': invoice_amount_total,
+                        'amount_paid': 0.0,
+                        'amount_remaining': invoice_amount_residual,
+                        'status': 'Payment not applied: Insufficient funds.'
                     })
                     continue
-                if invoice_record[0]['amount_residual'] <= 0:
+
+                # Amount to pay on this invoice is min(invoice_amount_residual, total_amount)
+                amount_to_pay = min(invoice_amount_residual, total_amount)
+                if amount_to_pay <= 0:
                     payments_made.append({
                         'invoice_id': invoice_id,
+                        'invoice_total_amount': invoice_amount_total,
+                        'amount_paid': 0.0,
+                        'amount_remaining': invoice_amount_residual,
                         'status': 'Invoice already paid or no balance remaining.'
                     })
                     continue
@@ -146,7 +156,7 @@ class OdooClient:
                     [{
                         'journal_id': bank_journal_id,
                         'payment_date': payment_date,
-                        'amount': invoice_record[0]['amount_residual'],
+                        'amount': amount_to_pay,
                     }],
                     {'context': context}
                 )
@@ -162,6 +172,9 @@ class OdooClient:
                 if not available_payment_method_line_ids:
                     payments_made.append({
                         'invoice_id': invoice_id,
+                        'invoice_total_amount': invoice_amount_total,
+                        'amount_paid': 0.0,
+                        'amount_remaining': invoice_amount_residual,
                         'status': 'No available payment methods.'
                     })
                     continue
@@ -169,11 +182,12 @@ class OdooClient:
                 # Step 4: Select a payment method line
                 payment_method_line_id = available_payment_method_line_ids[0]  # Select the first available method
 
-                # Step 5: Write the 'payment_method_line_id' back to the wizard
+                # Step 5: Write the 'payment_method_line_id' and 'amount' back to the wizard
                 self.execute_kw(
                     'account.payment.register', 'write',
                     [[payment_register_id], {
-                        'payment_method_line_id': payment_method_line_id
+                        'payment_method_line_id': payment_method_line_id,
+                        'amount': amount_to_pay,
                     }],
                     {'context': context}
                 )
@@ -185,9 +199,22 @@ class OdooClient:
                     {'context': context}
                 )
 
+                # Update total_amount
+                total_amount -= amount_to_pay
+
+                # Fetch updated invoice residual amount
+                invoice_updated = self.execute_kw(
+                    'account.move', 'read',
+                    [invoice_id],
+                    {'fields': ['amount_residual'], 'context': context}
+                )
+                amount_remaining = invoice_updated[0]['amount_residual']
+
                 payments_made.append({
                     'invoice_id': invoice_id,
-                    'payment_register_id': payment_register_id,
+                    'invoice_total_amount': invoice_amount_total,
+                    'amount_paid': amount_to_pay,
+                    'amount_remaining': amount_remaining,
                     'status': 'Payment Completed'
                 })
 
@@ -195,6 +222,9 @@ class OdooClient:
                 logging.error(f"Payment registration failed for invoice {invoice_id}: {e}", exc_info=True)
                 payments_made.append({
                     'invoice_id': invoice_id,
+                    'invoice_total_amount': invoice_amount_total,
+                    'amount_paid': 0.0,
+                    'amount_remaining': invoice_amount_residual,
                     'status': f'Payment Registration Failed: {str(e)}'
                 })
 
