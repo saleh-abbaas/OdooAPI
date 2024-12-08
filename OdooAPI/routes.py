@@ -31,15 +31,15 @@ def check_customer():
         if not data:
             raise ValueError("Invalid JSON data.")
 
-        mobile_number = data.get('mobile_number')
+        customer_id = data.get('customer_id')
         source = data.get('source')
 
-        if not mobile_number:
-            raise ValueError("Mobile number is required.")
+        if not customer_id:
+            raise ValueError("Customer ID is required.")
         if not source:
             raise ValueError("Source is required.")
 
-        mobile_number = mobile_number.strip()
+        customer_id = customer_id.strip()
         source = source.strip().lower()
 
         # Audit the request
@@ -53,15 +53,15 @@ def check_customer():
         # Get Odoo client
         odoo_client = get_odoo_client()
 
-        # Search for partners by mobile number
+        # Search for partners by customer id
         try:
-            partners = odoo_client.get_partners_by_mobile(mobile_number)
+            partners = odoo_client.get_partners_by_mobile(customer_id)
         except Exception as e:
             logging.error(f"Odoo connection error: {e}", exc_info=True)
             return jsonify({'message': 'Service temporarily unavailable. Please try again later.'}), 503
 
         if not partners:
-            # message = f"No customer found for mobile number {mobile_number}."
+            # message = f"No customer found for customer id {customer_id}."
             message = f"Invalid Billing Number"
             code = '408'
             status_of_query = False
@@ -74,7 +74,7 @@ def check_customer():
             return jsonify(response_data), 408
         elif len(partners) > 1:
             partner_names = ', '.join(partner['name'] for partner in partners)
-            message = f"Multiple customers found for mobile number {mobile_number}: {partner_names}."
+            message = f"Multiple customers found for customer id {customer_id}: {partner_names}."
             code = '400'
             status_of_query = False
             status_str = 'failed'
@@ -86,7 +86,7 @@ def check_customer():
             return jsonify(response_data), 400
         else:
             # Exactly one customer found
-            message = f"Customer found for mobile number {mobile_number}: {partners[0]['name']}."
+            message = f"Customer found for customer id {customer_id}: {partners[0]['name']}."
             code = '200'
             status_of_query = True
             status_str = 'successful'
@@ -120,15 +120,15 @@ def get_total_amount():
         if not data:
             raise ValueError("Invalid JSON data.")
 
-        mobile_number = data.get('mobile_number')
+        customer_id = data.get('customer_id')
         source = data.get('source')
 
-        if not mobile_number:
-            raise ValueError("Mobile number is required.")
+        if not customer_id:
+            raise ValueError("Customer ID is required.")
         if not source:
             raise ValueError("Source is required.")
 
-        mobile_number = mobile_number.strip()
+        customer_id = customer_id.strip()
         source = source.strip().lower()
 
         # Audit the request
@@ -142,16 +142,16 @@ def get_total_amount():
         # Get Odoo client
         odoo_client = get_odoo_client()
 
-        # Search for partners by mobile number
+        # Search for partners by customer id
         try:
-            partners = odoo_client.get_partners_by_mobile(mobile_number)
+            partners = odoo_client.get_partners_by_mobile(customer_id)
         except Exception as e:
             logging.error(f"Odoo connection error: {e}", exc_info=True)
             return jsonify({'message': 'Service temporarily unavailable. Please try again later.'}), 503
 
         if not partners:
             message = f"Invalid Billing Number"
-            # No customer found for mobile number {mobile_number}.
+            # No customer found for customer id {customer_id}.
             code = '408'
             status_of_query = False
             status_str = 'failed'
@@ -163,7 +163,7 @@ def get_total_amount():
             return jsonify(response_data), 408
         elif len(partners) > 1:
             partner_names = ', '.join(partner['name'] for partner in partners)
-            message = f"Multiple customers found for mobile number {mobile_number}: {partner_names}."
+            message = f"Multiple customers found for customer id {customer_id}: {partner_names}."
             code = '400'
             status_of_query = False
             status_str = 'failed'
@@ -175,14 +175,14 @@ def get_total_amount():
             return jsonify(response_data), 400
         else:
             try:
-                invoices = odoo_client.get_unpaid_invoices_by_mobile(mobile_number)
+                invoices = odoo_client.get_unpaid_invoices_by_mobile(customer_id)
             except Exception as e:
                 logging.error(f"Odoo connection error: {e}", exc_info=True)
                 return jsonify({'message': 'Service temporarily unavailable. Please try again later.'}), 503
 
             if not invoices:
                 total_amount=0.0
-                message = f"No unpaid invoices found for mobile number {mobile_number}."
+                message = f"No unpaid invoices found for customer id {customer_id}."
                 code = '200'
                 status_of_query = True
                 status_str = 'successful'
@@ -196,7 +196,7 @@ def get_total_amount():
             else:
                 total_amount = sum(invoice['amount_residual'] for invoice in invoices)
                 invoice_list = [{'id':p['id'],'amount':p['amount_residual']} for p in invoices]
-                message = f"Total unpaid amount for mobile number {mobile_number} is {total_amount}."
+                message = f"Total unpaid amount for customer id {customer_id} is {total_amount}."
                 code = '200'
                 status_of_query = True
                 status_str = 'successful'
@@ -231,13 +231,13 @@ def pay_all_invoices():
         if not data:
             raise ValueError("Invalid JSON data.")
 
-        mobile_number = data.get('mobile_number')
+        customer_id = data.get('customer_id')
         total_amount = data.get('total_amount')
         payment_date = data.get('date')
         source = data.get('source')
 
-        if not mobile_number:
-            raise ValueError("Mobile number is required.")
+        if not customer_id:
+            raise ValueError("Customer ID is required.")
         if total_amount is None:
             raise ValueError("Total amount is required.")
         if not payment_date:
@@ -245,7 +245,7 @@ def pay_all_invoices():
         if not source:
             raise ValueError("Source is required.")
 
-        mobile_number = mobile_number.strip()
+        customer_id = customer_id.strip()
         total_amount = float(total_amount)
         payment_date = payment_date.strip()
         source = source.strip().lower()
@@ -261,9 +261,9 @@ def pay_all_invoices():
         # Get Odoo client
         odoo_client = get_odoo_client()
 
-        # Search for partners by mobile number
+        # Search for partners by customer id
         try:
-            partners = odoo_client.get_partners_by_mobile(mobile_number)
+            partners = odoo_client.get_partners_by_mobile(customer_id)
         except Exception as e:
             logging.error(f"Odoo connection error: {e}", exc_info=True)
             return jsonify({'message': 'Service temporarily unavailable. Please try again later.'}), 503
@@ -281,7 +281,7 @@ def pay_all_invoices():
             return jsonify(response_data), 408
         elif len(partners) > 1:
             partner_names = ', '.join(partner['name'] for partner in partners)
-            message = f"Multiple customers found for mobile number {mobile_number}: {partner_names}."
+            message = f"Multiple customers found for customer id {customer_id}: {partner_names}."
             code = '400'
             status_of_query = False
             status_str = 'failed'
@@ -294,14 +294,14 @@ def pay_all_invoices():
         else:
             # Fetch unpaid invoices
             try:
-                invoices = odoo_client.get_unpaid_invoices_by_mobile(mobile_number)
+                invoices = odoo_client.get_unpaid_invoices_by_mobile(customer_id)
             except Exception as e:
                 logging.error(f"Odoo connection error: {e}", exc_info=True)
                 return jsonify({'message': 'Service temporarily unavailable. Please try again later.'}), 503
 
             if not invoices:
                 total_unpaid_amount = 0.0
-                message = f"No unpaid invoices found for mobile number {mobile_number}."
+                message = f"No unpaid invoices found for customer id {customer_id}."
                 code = '303'
                 status_of_query = False
                 status_str = 'failed'

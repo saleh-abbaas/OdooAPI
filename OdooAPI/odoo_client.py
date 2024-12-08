@@ -76,8 +76,8 @@ class OdooClient:
     def get_partners_by_mobile(self, mobile_number):
         partners = self.execute_kw(
             'res.partner', 'search_read',
-            [[['mobile', '=', mobile_number]]],
-            {'fields': ['id', 'name']}
+            [[['vat', '=', mobile_number]]],
+            {'fields': ['id', 'name','vat']}
         )
         return partners
 

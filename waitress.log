@@ -1,41 +1,116 @@
-2024-12-03 22:59:31,342 INFO Received request at /check_customer
-2024-12-03 22:59:31,342 INFO {'datetime': '2024-12-03 22:59:31', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080543', 'source': 'esadad'}}
-2024-12-03 22:59:54,243 INFO Check customer success: Customer found for mobile number 402080543: „ﬂ » œÌ„« Œ·›….
-2024-12-03 23:00:05,879 INFO Received request at /total_amount
-2024-12-03 23:00:05,880 INFO {'datetime': '2024-12-03 23:00:05', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080543', 'source': 'esadad'}}
-2024-12-03 23:00:29,544 INFO Total amount failed: No unpaid invoices found for mobile number 402080543.
-2024-12-03 23:02:14,917 INFO Received request at /total_amount
-2024-12-03 23:02:14,917 INFO {'datetime': '2024-12-03 23:02:14', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080542', 'source': 'esadad'}}
-2024-12-03 23:02:38,220 INFO Total amount success: Total unpaid amount for mobile number 402080542 is 4590.0.
-2024-12-03 23:03:57,008 INFO Received request at /total_amount
-2024-12-03 23:03:57,009 INFO {'datetime': '2024-12-03 23:03:57', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080541', 'source': 'esadad'}}
-2024-12-03 23:04:20,590 INFO Total amount success: Total unpaid amount for mobile number 402080541 is 8230.0.
-2024-12-03 23:05:16,246 INFO Received request at /pay_invoices
-2024-12-03 23:05:16,247 INFO {'datetime': '2024-12-03 23:05:16', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080541', 'total_amount': 400.0, 'date': '2023-10-01', 'source': 'esadad'}}
-2024-12-03 23:05:40,052 ERROR Pay invoices failed: Provided total amount does not match the total unpaid amount.
-2024-12-03 23:06:27,554 INFO Serving on http://0.0.0.0:5000
-2024-12-03 23:06:36,115 INFO Received request at /pay_invoices
-2024-12-03 23:06:36,116 INFO {'datetime': '2024-12-03 23:06:36', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080541', 'total_amount': 400.0, 'date': '2023-10-01', 'source': 'esadad'}}
-2024-12-03 23:08:25,851 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3903: Payment Completed; Invoice ID 3845: Payment Completed; Invoice ID 3787: Payment Completed; Invoice ID 3784: Payment Completed; Invoice ID 3726: Payment Completed; Invoice ID 3669: Payment Completed; Invoice ID 3611: Payment Completed; Invoice ID 3555: Payment Completed; Invoice ID 3502: Payment Completed; Invoice ID 3453: Payment Completed; Invoice ID 3399: Payment Completed; Invoice ID 2997: Payment Completed; Invoice ID 2939: Payment Completed; Invoice ID 2878: Payment Completed; Invoice ID 2819: Payment Completed; Invoice ID 2763: Payment Completed; Invoice ID 2700: Payment Completed; Invoice ID 2646: Payment Completed; Invoice ID 2579: Payment Completed; Invoice ID 2531: Payment Completed; Invoice ID 2479: Payment Completed; Invoice ID 2141: Payment Completed; Invoice ID 2052: Payment Completed; Invoice ID 1963: Payment Completed; Invoice ID 1679: Payment Completed; Invoice ID 1615: Payment Completed; Invoice ID 1439: Payment Completed; Invoice ID 1390: Payment Completed.
-2024-12-03 23:17:11,813 INFO Serving on http://0.0.0.0:5000
-2024-12-03 23:17:43,352 INFO Received request at /check_customer
-2024-12-03 23:17:43,353 INFO {'datetime': '2024-12-03 23:17:43', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080540', 'source': 'esadad'}}
-2024-12-03 23:18:06,045 INFO Check customer success: Customer found for mobile number 402080540: ⁄„«—… —»ÕÌ «·ÕÃÌ 11.
-2024-12-03 23:18:14,964 INFO Received request at /total_amount
-2024-12-03 23:18:14,964 INFO {'datetime': '2024-12-03 23:18:14', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080540', 'source': 'esadad'}}
-2024-12-03 23:18:38,331 INFO Total amount success: Total unpaid amount for mobile number 402080540 is 750.0.
-2024-12-03 23:18:54,605 INFO Received request at /pay_invoices
-2024-12-03 23:18:54,606 INFO {'datetime': '2024-12-03 23:18:54', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080540', 'total_amount': 300, 'date': '2023-10-01', 'source': 'esadad'}}
-2024-12-03 23:19:22,643 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3835: Payment Completed; Invoice ID 3893: Payment Completed; Invoice ID 3950: Payment not applied: Insufficient funds..
-2024-12-03 23:22:49,072 INFO Received request at /check_customer
-2024-12-03 23:22:49,072 INFO {'datetime': '2024-12-03 23:22:49', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080544', 'source': 'esadad'}}
-2024-12-03 23:23:11,897 ERROR Check customer failed: Invalid Billing Number
-2024-12-03 23:23:31,557 INFO Received request at /check_customer
-2024-12-03 23:23:31,558 INFO {'datetime': '2024-12-03 23:23:31', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080544', 'source': 'esadad'}}
-2024-12-03 23:23:54,532 INFO Check customer success: Customer found for mobile number 402080544: Â«‰Ì ⁄Ê«œ.
-2024-12-03 23:24:05,167 INFO Received request at /total_amount
-2024-12-03 23:24:05,168 INFO {'datetime': '2024-12-03 23:24:05', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080544', 'source': 'esadad'}}
-2024-12-03 23:24:28,737 INFO Total amount success: Total unpaid amount for mobile number 402080544 is 600.0.
-2024-12-03 23:27:11,678 INFO Received request at /pay_invoices
-2024-12-03 23:27:11,679 INFO {'datetime': '2024-12-03 23:27:11', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080540', 'total_amount': 150, 'date': '2023-10-01', 'source': 'esadad'}}
-2024-12-03 23:27:37,822 INFO Pay invoices success: Payment process completed. Details: Invoice ID 3893: Payment Completed; Invoice ID 3950: Payment not applied: Insufficient funds..
+2024-12-03 23:58:28,521 INFO Received request at /total_amount
+2024-12-03 23:58:28,523 INFO {'datetime': '2024-12-03 23:58:28', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080544', 'source': 'esadad'}}
+2024-12-03 23:58:51,397 ERROR Total amount failed: Invalid Billing Number
+2024-12-03 23:59:41,253 INFO Received request at /total_amount
+2024-12-03 23:59:41,253 INFO {'datetime': '2024-12-03 23:59:41', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080544', 'source': 'esadad'}}
+2024-12-04 00:00:04,487 ERROR Total amount failed: Invalid Billing Number
+2024-12-04 00:02:16,403 INFO Serving on http://0.0.0.0:5000
+2024-12-04 00:02:21,773 INFO Received request at /total_amount
+2024-12-04 00:02:21,773 INFO {'datetime': '2024-12-04 00:02:21', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080544', 'source': 'esadad'}}
+2024-12-04 00:02:44,694 ERROR Total amount failed: Invalid Billing Number
+2024-12-04 00:07:29,053 INFO Serving on http://0.0.0.0:5000
+2024-12-04 00:07:38,543 INFO Received request at /total_amount
+2024-12-04 00:07:38,543 INFO {'datetime': '2024-12-04 00:07:38', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080544', 'source': 'esadad'}}
+2024-12-04 00:08:01,385 ERROR Total amount failed: Invalid Billing Number
+2024-12-04 00:09:06,231 INFO Received request at /total_amount
+2024-12-04 00:09:06,247 INFO {'datetime': '2024-12-04 00:09:06', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080545', 'source': 'esadad'}}
+2024-12-04 00:09:29,141 ERROR Error in /total_amount endpoint: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\Asus\Documents\GitHub\OdooAPI\OdooAPI\routes.py", line 165, in get_total_amount
+    partner_names = ', '.join(partner['name'] for partner in partners)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Asus\Documents\GitHub\OdooAPI\OdooAPI\routes.py", line 165, in <genexpr>
+    partner_names = ', '.join(partner['name'] for partner in partners)
+                              ~~~~~~~^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2024-12-04 00:14:55,458 INFO Received request at /total_amount
+2024-12-04 00:14:55,458 INFO {'datetime': '2024-12-04 00:14:55', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080546', 'source': 'esadad'}}
+2024-12-04 00:15:18,293 ERROR Error in /total_amount endpoint: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "c:\Users\Asus\Documents\GitHub\OdooAPI\OdooAPI\routes.py", line 165, in get_total_amount
+    partner_names = ', '.join(partner['name'] for partner in partners)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Asus\Documents\GitHub\OdooAPI\OdooAPI\routes.py", line 165, in <genexpr>
+    partner_names = ', '.join(partner['name'] for partner in partners)
+                              ~~~~~~~^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2024-12-04 00:15:59,665 INFO Serving on http://0.0.0.0:5000
+2024-12-04 00:16:05,594 INFO Received request at /total_amount
+2024-12-04 00:16:05,596 INFO {'datetime': '2024-12-04 00:16:05', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080540', 'source': 'esadad'}}
+2024-12-04 00:16:28,641 ERROR Total amount failed: Invalid Billing Number
+2024-12-04 00:16:37,658 INFO Received request at /total_amount
+2024-12-04 00:16:37,660 INFO {'datetime': '2024-12-04 00:16:37', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080541', 'source': 'esadad'}}
+2024-12-04 00:17:00,462 ERROR Total amount failed: Invalid Billing Number
+2024-12-04 00:17:36,487 INFO Received request at /total_amount
+2024-12-04 00:17:36,487 INFO {'datetime': '2024-12-04 00:17:36', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080546', 'source': 'esadad'}}
+2024-12-04 00:17:59,279 ERROR Total amount failed: Invalid Billing Number
+2024-12-04 00:18:20,419 INFO Serving on http://0.0.0.0:5000
+2024-12-04 00:18:23,887 INFO Received request at /total_amount
+2024-12-04 00:18:23,887 INFO {'datetime': '2024-12-04 00:18:23', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080546', 'source': 'esadad'}}
+2024-12-04 00:18:46,460 ERROR Odoo connection error: 'OdooClient' object has no attribute 'get_partners_by_mobile'
+Traceback (most recent call last):
+  File "c:\Users\Asus\Documents\GitHub\OdooAPI\OdooAPI\routes.py", line 147, in get_total_amount
+    partners = odoo_client.get_partners_by_mobile(mobile_number)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'OdooClient' object has no attribute 'get_partners_by_mobile'. Did you mean: 'get_partner_by_id'?
+2024-12-04 00:19:30,141 INFO Serving on http://0.0.0.0:5000
+2024-12-04 00:19:32,174 INFO Received request at /total_amount
+2024-12-04 00:19:32,174 INFO {'datetime': '2024-12-04 00:19:32', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080546', 'source': 'esadad'}}
+2024-12-04 00:19:55,747 INFO Total amount success: Total unpaid amount for mobile number 402080546 is 1080.0.
+2024-12-04 00:20:27,390 INFO Serving on http://0.0.0.0:5000
+2024-12-04 00:20:29,709 INFO Received request at /total_amount
+2024-12-04 00:20:29,710 INFO {'datetime': '2024-12-04 00:20:29', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080546', 'source': 'esadad'}}
+2024-12-04 00:20:53,009 INFO Total amount success: Total unpaid amount for mobile number 402080546 is 1080.0.
+2024-12-04 00:21:21,720 INFO Received request at /total_amount
+2024-12-04 00:21:21,720 INFO {'datetime': '2024-12-04 00:21:21', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'mobile_number': '402080547', 'source': 'esadad'}}
+2024-12-04 00:21:45,116 INFO Total amount failed: No unpaid invoices found for mobile number 402080547.
+2024-12-04 00:23:30,990 INFO Serving on http://0.0.0.0:5000
+2024-12-04 00:23:34,704 INFO Received request at /total_amount
+2024-12-04 00:23:34,705 INFO {'datetime': '2024-12-04 00:23:34', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080547', 'source': 'esadad'}}
+2024-12-04 00:23:58,126 INFO Total amount failed: No unpaid invoices found for customer id 402080547.
+2024-12-04 00:24:32,466 INFO Received request at /check_customer
+2024-12-04 00:24:32,467 INFO {'datetime': '2024-12-04 00:24:32', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080547', 'source': 'esadad'}}
+2024-12-04 00:24:55,112 INFO Check customer success: Customer found for customer id 402080547: ‘—ﬂ… «·„”«— (”‰œÌ«‰).
+2024-12-04 00:25:04,704 INFO Received request at /total_amount
+2024-12-04 00:25:04,705 INFO {'datetime': '2024-12-04 00:25:04', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080548', 'source': 'esadad'}}
+2024-12-04 00:25:28,189 INFO Total amount success: Total unpaid amount for customer id 402080548 is 1800.0.
+2024-12-04 00:27:08,982 INFO Received request at /pay_invoices
+2024-12-04 00:27:08,982 INFO {'datetime': '2024-12-04 00:27:08', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080548', 'total_amount': 800, 'date': '2023-10-01', 'source': 'esadad'}}
+2024-12-04 00:27:43,086 INFO Pay invoices success: Payment process completed. Details: Invoice ID 1373: Payment Completed; Invoice ID 1461: Payment Completed; Invoice ID 1647: Payment Completed; Invoice ID 1701: Payment Completed; Invoice ID 1980: Payment Completed; Invoice ID 2091: Payment not applied: Insufficient funds.; Invoice ID 2178: Payment not applied: Insufficient funds.; Invoice ID 2611: Payment not applied: Insufficient funds.; Invoice ID 2733: Payment not applied: Insufficient funds.; Invoice ID 2986: Payment not applied: Insufficient funds..
+2024-12-04 00:30:15,015 INFO Received request at /total_amount
+2024-12-04 00:30:15,016 INFO {'datetime': '2024-12-04 00:30:15', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080548', 'source': 'esadad'}}
+2024-12-04 00:30:38,426 INFO Total amount success: Total unpaid amount for customer id 402080548 is 1000.0.
+2024-12-04 00:30:47,172 INFO Received request at /pay_invoices
+2024-12-04 00:30:47,173 INFO {'datetime': '2024-12-04 00:30:47', 'endpoint': '/pay_invoices', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080548', 'total_amount': 1000, 'date': '2023-10-01', 'source': 'esadad'}}
+2024-12-04 00:31:23,123 INFO Pay invoices success: Payment process completed. Details: Invoice ID 1980: Payment Completed; Invoice ID 2091: Payment Completed; Invoice ID 2178: Payment Completed; Invoice ID 2611: Payment Completed; Invoice ID 2733: Payment Completed; Invoice ID 2986: Payment Completed.
+2024-12-04 00:31:29,160 INFO Received request at /total_amount
+2024-12-04 00:31:29,161 INFO {'datetime': '2024-12-04 00:31:29', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080548', 'source': 'esadad'}}
+2024-12-04 00:31:52,519 INFO Total amount failed: No unpaid invoices found for customer id 402080548.
+2024-12-08 00:42:58,880 INFO Serving on http://0.0.0.0:5000
+2024-12-08 00:43:48,511 INFO Received request at /check_customer
+2024-12-08 00:43:48,511 INFO {'datetime': '2024-12-08 00:43:48', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080543', 'source': 'esadad'}}
+2024-12-08 00:44:12,096 INFO Check customer success: Customer found for customer id 402080543: „ﬂ » œÌ„« Œ·›….
+2024-12-08 00:44:41,051 INFO Received request at /check_customer
+2024-12-08 00:44:41,052 ERROR Error in /check_customer endpoint: Customer ID is required.
+Traceback (most recent call last):
+  File "c:\Users\Asus\Documents\GitHub\OdooAPI\OdooAPI\routes.py", line 38, in check_customer
+    raise ValueError("Customer ID is required.")
+ValueError: Customer ID is required.
+2024-12-08 00:44:46,885 INFO Received request at /check_customer
+2024-12-08 00:44:46,885 ERROR Error in /check_customer endpoint: Customer ID is required.
+Traceback (most recent call last):
+  File "c:\Users\Asus\Documents\GitHub\OdooAPI\OdooAPI\routes.py", line 38, in check_customer
+    raise ValueError("Customer ID is required.")
+ValueError: Customer ID is required.
+2024-12-08 00:44:55,995 INFO Received request at /check_customer
+2024-12-08 00:44:55,995 INFO {'datetime': '2024-12-08 00:44:55', 'endpoint': '/check_customer', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080543', 'source': 'esadad'}}
+2024-12-08 00:45:18,800 INFO Check customer success: Customer found for customer id 402080543: „ﬂ » œÌ„« Œ·›….
+2024-12-08 00:45:35,027 INFO Received request at /total_amount
+2024-12-08 00:45:35,028 ERROR Error in /total_amount endpoint: Customer ID is required.
+Traceback (most recent call last):
+  File "c:\Users\Asus\Documents\GitHub\OdooAPI\OdooAPI\routes.py", line 127, in get_total_amount
+    raise ValueError("Customer ID is required.")
+ValueError: Customer ID is required.
+2024-12-08 00:45:41,927 INFO Received request at /total_amount
+2024-12-08 00:45:41,927 INFO {'datetime': '2024-12-08 00:45:41', 'endpoint': '/total_amount', 'source': 'esadad', 'client_ip': '127.0.0.1', 'user_agent': 'PostmanRuntime/7.43.0', 'request_data': {'customer_id': '402080543', 'source': 'esadad'}}
+2024-12-08 00:46:05,502 INFO Total amount success: Total unpaid amount for customer id 402080543 is 12740.0.
