@@ -1,0 +1,11 @@
+waitress.log
+OdooAPI/app.log
+OdooAPI/audit.log
+OdooAPI/__pycache__/__init__.cpython-312.pyc
+OdooAPI/__pycache__/config.cpython-312.pyc
+OdooAPI/__pycache__/logging_config.cpython-312.pyc
+OdooAPI/__pycache__/models.cpython-312.pyc
+OdooAPI/__pycache__/mysql_utils.cpython-312.pyc
+OdooAPI/__pycache__/odoo_client.cpython-312.pyc
+OdooAPI/__pycache__/routes.cpython-312.pyc
+OdooAPI/__pycache__/utils.cpython-312.pyc

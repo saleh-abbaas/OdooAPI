@@ -3,16 +3,17 @@
 from flask import Flask
 from .config import Config
 from .logging_config import setup_logging
+from OdooAPI.models import init_db
+from OdooAPI.routes import bp
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
+
     setup_logging(app)
-    
-    with app.app_context():
-        # Import parts of our application
-        from .routes import bp
-        # Register Blueprints
-        app.register_blueprint(bp)
-        
+
+    # Initialize the database (this creates tables if not exist)
+    init_db(app)
+
+    app.register_blueprint(bp)
     return app

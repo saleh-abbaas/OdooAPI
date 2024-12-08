@@ -1,5 +1,3 @@
-# OdooAPI/utils.py
-
 from flask import request
 from datetime import datetime
 import logging

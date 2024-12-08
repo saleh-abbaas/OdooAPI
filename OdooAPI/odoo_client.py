@@ -1,5 +1,3 @@
-# OdooAPI/odoo_client.py
-
 import xmlrpc.client
 import ssl
 import logging
@@ -65,7 +63,7 @@ class OdooClient:
     def get_bank_journal_id(self):
         bank_journal = self.execute_kw(
             'account.journal', 'search_read',
-            [[['name', '=', 'Bank']]],
+            [[['name', '=', 'Arab Islamic bank-ILS']]],
             {'fields': ['id', 'name']}
         )
         if bank_journal:
@@ -94,28 +92,37 @@ class OdooClient:
                 ['move_type', '=', 'out_invoice'],
                 ['amount_residual', '>', 0]
             ]],
-            {'fields': ['id', 'amount_residual', 'currency_id', 'partner_id', 'invoice_date', 'amount_total']}
+            {'fields': ['id', 'amount_residual', 'currency_id', 'partner_id', 'invoice_date', 'amount_total', 'state']}
         )
         if not invoices:
             return None
         return invoices
 
-    def register_payment_for_invoices(self, invoices, payment_date, total_amount):
+    def register_payment_for_invoices(self, invoices, payment_date, total_amount, guid=None):
         payments_made = []
         bank_journal_id = self.get_bank_journal_id()
+
         if not bank_journal_id:
+            logging.error("Bank journal not found.")
             return [{"message": "Bank journal not found."}]
 
-        # Sort invoices by 'invoice_date'
-        invoices_sorted = sorted(invoices, key=lambda x: x['invoice_date'])
+        invoices_sorted = sorted(invoices, key=lambda x: x.get('invoice_date', ''))
 
         for invoice in invoices_sorted:
             try:
+                if 'id' not in invoice or 'amount_total' not in invoice or 'amount_residual' not in invoice:
+                    payments_made.append({
+                        'invoice_id': invoice.get('id', 'Unknown'),
+                        'invoice_total_amount': invoice.get('amount_total', 0.0),
+                        'amount_paid': 0.0,
+                        'amount_remaining': invoice.get('amount_residual', 0.0),
+                        'status': 'Invalid invoice structure.'
+                    })
+                    continue
+
                 invoice_id = invoice['id']
                 invoice_amount_total = invoice['amount_total']
                 invoice_amount_residual = invoice['amount_residual']
-                invoice_date = invoice['invoice_date']
-                # If total_amount left is zero, break
                 if total_amount <= 0:
                     payments_made.append({
                         'invoice_id': invoice_id,
@@ -126,7 +133,6 @@ class OdooClient:
                     })
                     continue
 
-                # Amount to pay on this invoice is min(invoice_amount_residual, total_amount)
                 amount_to_pay = min(invoice_amount_residual, total_amount)
                 if amount_to_pay <= 0:
                     payments_made.append({
@@ -144,19 +150,17 @@ class OdooClient:
                     [[invoice_id]],
                     {}
                 )
-
-                # Get the context from the action
                 context = action.get('context', {})
-                context.update(
-                    {'active_ids': [invoice_id], 'active_model': 'account.move', 'active_id': invoice_id})
+                context.update({'active_ids': [invoice_id], 'active_model': 'account.move', 'active_id': invoice_id})
 
-                # Step 2: Create the payment register wizard with the context
+                # Step 2: Create the payment register wizard with GUID in 'communication'
                 payment_register_id = self.execute_kw(
                     'account.payment.register', 'create',
                     [{
                         'journal_id': bank_journal_id,
                         'payment_date': payment_date,
                         'amount': amount_to_pay,
+                        'communication': f"GUID={guid}" if guid else ''
                     }],
                     {'context': context}
                 )
@@ -167,7 +171,7 @@ class OdooClient:
                     [payment_register_id],
                     {'fields': ['available_payment_method_line_ids'], 'context': context}
                 )
-                available_payment_method_line_ids = payment_register[0]['available_payment_method_line_ids']
+                available_payment_method_line_ids = payment_register[0].get('available_payment_method_line_ids', [])
 
                 if not available_payment_method_line_ids:
                     payments_made.append({
@@ -179,8 +183,7 @@ class OdooClient:
                     })
                     continue
 
-                # Step 4: Select a payment method line
-                payment_method_line_id = available_payment_method_line_ids[0]  # Select the first available method
+                payment_method_line_id = available_payment_method_line_ids[0]
 
                 # Step 5: Write the 'payment_method_line_id' and 'amount' back to the wizard
                 self.execute_kw(
@@ -199,7 +202,6 @@ class OdooClient:
                     {'context': context}
                 )
 
-                # Update total_amount
                 total_amount -= amount_to_pay
 
                 # Fetch updated invoice residual amount
@@ -208,7 +210,7 @@ class OdooClient:
                     [invoice_id],
                     {'fields': ['amount_residual'], 'context': context}
                 )
-                amount_remaining = invoice_updated[0]['amount_residual']
+                amount_remaining = invoice_updated[0].get('amount_residual', 0.0)
 
                 payments_made.append({
                     'invoice_id': invoice_id,
@@ -219,12 +221,12 @@ class OdooClient:
                 })
 
             except Exception as e:
-                logging.error(f"Payment registration failed for invoice {invoice_id}: {e}", exc_info=True)
+                logging.error(f"Payment registration failed for invoice {invoice.get('id', 'Unknown')}: {e}", exc_info=True)
                 payments_made.append({
-                    'invoice_id': invoice_id,
-                    'invoice_total_amount': invoice_amount_total,
+                    'invoice_id': invoice.get('id', 'Unknown'),
+                    'invoice_total_amount': invoice.get('amount_total', 0.0),
                     'amount_paid': 0.0,
-                    'amount_remaining': invoice_amount_residual,
+                    'amount_remaining': invoice.get('amount_residual', 0.0),
                     'status': f'Payment Registration Failed: {str(e)}'
                 })
 
